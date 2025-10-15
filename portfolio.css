@@ -17,14 +17,20 @@ header{
   .passport{
     width: 150px;
     height: auto;
-    margin-left: 100px;
+    margin-right: 250px;
+  }
+  h1{
+    margin-left: 50px;
   }
 }
 @media(max-width: 480px){
   .passport{
     width:  150px;
     height: auto;
-    margin-left: 100px;
+    margin-left: 67px;
+  }
+  h1{
+    margin-right: 100px;
   }
 }
 .home{
@@ -467,5 +473,17 @@ body {
   .skills-image {
     flex-direction: column;
     gap: 20px;
+  }
+}
+@media(max-width:768px){
+  .social-links{
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media(max-width: 480px){
+  .social-links{
+    display: flex;
+    flex-direction: column;
   }
 }
