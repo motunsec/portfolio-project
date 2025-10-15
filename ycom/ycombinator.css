@@ -142,6 +142,7 @@ h3{
     background-color: #FDA942;
 }
 .hero-image{
+  overflow: hidden;
     overflow-x: hidden;
     display: inline-block;
     justify-content: space-around;
@@ -183,8 +184,9 @@ h3{
 }
 .sam{
     position: relative;
-    width: 600px;
     height: auto;
+    width: 600px;
+    object-fit: cover;
     margin-left: 300px;
 }
 .hamburger {
@@ -224,128 +226,76 @@ h3{
 
 .hero img {
   max-width: 500px;
-  width: 100%;
+  width: 600px;
   height: auto;
 }
-
-.floating-card {
-  position: absolute;
-  bottom: -50px;
-  right: 20px;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  max-width: 250px;
+@media(max-width: 768px){
+      .sam{
+        display: none;
+      }
+      .card1{
+        display: none;
+      }
+      .card2{
+        display: none;
+      }
 }
-
-/* ---------------------------
-   Responsive: Tablets
---------------------------- */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    display: none; /* hide menu by default */
-    margin-top: 10px;
-  }
-
-  #menu-toggle:checked + .hamburger + nav .nav-links {
-    display: flex;
-  }
-
-  .dropdown {
-    position: relative;
-    top: 0;
-    left: 0;
-    box-shadow: none;
-    display: none;
-  }
-
-  .nav-links li:focus-within .dropdown {
-    display: flex;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .hero img {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .floating-card {
-    position: relative;
-    bottom: 0;
-    right: 0;
-    margin-top: -50px;
-    max-width: 90%;
-  }
-}
-
-/* ---------------------------
-   Responsive: Mobile
---------------------------- */
-@media (max-width: 480px) {
-  header {
-    padding: 10px 15px;
-  }
-
-  .nav-links li a {
-    font-size: 0.9rem;
-    padding: 8px 0;
-  }
-
-  .hero {
-    padding: 40px 15px;
-  }
-}
-.hamburger{
-  display: none;
-  font-size: 24px;
-  color: black;
-  cursor: pointer;
-  margin-left: auto;
-}
-#menu-toggle{
-  display: none;
-}
-@media (max-width: 768px) {
-  .nav-links {
-  align-items: center;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background: white;
-  width: 200px;
-  flex-direction: column;
-  gap: 15px;
-  padding: 15px 20px;
-  display: none;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: max-height 0.4s ease,padding 0.3s ease;
-  }
-  #menu-toggle:checked ~ .nav-links {
+.navbar {
   display: flex;
-  max-height: 300px;
-  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #333;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
   }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Show hamburger on mobile */
   .hamburger {
-  margin-right: 10px;
-  display: block;
+    display: block;
+  }
+  .sam{
+    display: none;
   }
 }
