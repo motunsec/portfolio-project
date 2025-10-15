@@ -132,7 +132,7 @@ nav{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    padding: 12px 50px;
+    padding: 12px 40px;
     border-radius: 50px;
     background-color: #081B9D;
     color: white;
@@ -180,5 +180,134 @@ h4{
     font-size: 16px;
     line-height: 24px;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #333;
+  color: white;
+}
 
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive (mobile) */
+@media (max-width: 768px) {
+    .logo{
+        width: 100px;
+    }
+    .hero-text{
+        font-size: 40px;
+    }
+    .email{
+        display: flex;
+        flex-direction: column;
+        padding: 6px 10px;
+        font-size: 20px;
+       
+    }
+    .video{
+        width: 300px;
+        height: auto;
+    }
+    .google{
+        display: flex;
+        flex-direction: column;
+    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 15px;
+  }
+
+  /* Show menu when checkbox is checked */
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: block;
+  }
+}
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Make buttons look nice */
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.3s;
+  flex: 1;
+  max-width: 250px;
+}
+
+/* Button colors */
+.email {
+  
+  color: white;
+}
+
+.google {
+ 
+  color: white;
+}
+
+.github {
+  
+  color: white;
+}
+
+/* Hover */
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* 📱 Stack vertically on small screens */
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column; /* stack them vertically */
+    align-items: center;
+    margin-left: 200px;
+  }
+    .video{
+        width: 330px;
+        height: auto;
+    }
+  .btn {
+    width: 80%; /* optional: make them take most of the width */
+  }
+}
