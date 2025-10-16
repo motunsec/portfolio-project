@@ -70,7 +70,7 @@ nav{
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
+    width: 100px;
     padding: 15px;
   }
    .logo{
@@ -78,6 +78,7 @@ nav{
    }
   /* Show hamburger on mobile */
   .hamburger {
+    margin-left: 100px;
     color: white;
     display: block;
   }
@@ -103,9 +104,7 @@ nav{
   }
 
   .btn {
-    margin-left: 50px;
-    align-self: flex-end;
-    margin-top: 10px;
+    display: none;
   }
   .logo, .hamburger, .btn {
     flex: 1;
