@@ -111,3 +111,23 @@ nav{
     text-align: center;
   }
 }
+@media (max-width: 700px) {
+  .nav-links {
+    flex-direction: column; /* stack links vertically */
+    align-items: stretch;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* 9) check for elements with huge fixed widths (use this to find offenders) */
+/* temporarily add this when debugging — highlights elements causing overflow */
+.debug-outline * {
+  outline: 1px dashed rgba(255,0,0,0.12);
+}
+html,body{
+ overflow-x: hidden;
+}
