@@ -53,9 +53,9 @@ nav{
 
 /* Hamburger button */
 .hamburger {
+  display: none;
   font-size: 26px;
   cursor: pointer;
-  user-select: none;
 }
 
 @media (max-width: 768px) {
@@ -110,7 +110,11 @@ nav{
     text-align: center;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 480px) {
+  .hamburger{
+    color: white;
+    margin-left: 100px;
+  }
   .nav-links {
     flex-direction: column; /* stack links vertically */
     align-items: stretch;
@@ -120,12 +124,6 @@ nav{
     width: 100%;
     padding: 12px;
   }
-}
-
-/* 9) check for elements with huge fixed widths (use this to find offenders) */
-/* temporarily add this when debugging — highlights elements causing overflow */
-.debug-outline * {
-  outline: 1px dashed rgba(255,0,0,0.12);
 }
 html,body{
  overflow-x: hidden;
